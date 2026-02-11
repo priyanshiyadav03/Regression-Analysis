@@ -1,108 +1,82 @@
-This project predicts medical insurance expenses based on features like age, BMI, and number of children.
-We explore the dataset, understand feature relationships, detect outliers, and build a linear regression model to predict expenses.
+# Medical Insurance Expense Prediction
 
-Dataset
+This project predicts **medical insurance expenses** based on features like **age, BMI, and number of children**.
 
-  File: insurance.csv
+We explore the dataset, understand feature relationships, detect outliers, and build a **Linear Regression model** to predict expenses.
 
-Features:
+---
 
-  age → Age of the individual
+##  Dataset
 
-  bmi → Body Mass Index
+**File:** `insurance.csv`
 
-  children → Number of children
+### Features
 
-Target: expenses → Medical insurance cost
+- **age** → Age of the individual  
+- **bmi** → Body Mass Index  
+- **children** → Number of children  
 
-Part A: Exploratory Data Analysis (EDA)
+###  Target
 
-Objective: Understand the data and feature relationships before modeling.
+- **expenses** → Medical insurance cost
 
-Implementation:
+---
 
-  Loaded dataset and checked first 5 rows, columns, and data types.
+##  Part A: Exploratory Data Analysis (EDA)
 
-  Calculated summary statistics (mean, std, min, max, quartiles).
+###  Objective
+Understand the data and feature relationships before modeling.
 
-  Checked for missing values → none found.
+### ⚙️ Implementation
 
-  Detected outliers using IQR method.
+- Loaded dataset and checked:
+  - First 5 rows
+  - Columns
+  - Data types
 
-  Calculated Pearson correlation to see which features affect expenses.
+- Calculated summary statistics:
+  - Mean
+  - Standard deviation
+  - Min / Max
+  - Quartiles
 
-Results:
+- Checked for missing values → **None found**
 
-  Most people are aged 30–40.
+- Detected outliers using **IQR method**
 
-  BMI mostly between 20–30.
+- Calculated **Pearson correlation**
 
-  Most people have 0–2 children.
+###  Results
 
-  Expenses are right-skewed (few people have very high costs).
+- Most people are aged **30–40**
+- BMI mostly between **20–30**
+- Most people have **0–2 children**
+- Expenses are **right-skewed**
+- **Age & BMI** show positive correlation with expenses
 
-  Age and BMI show a positive correlation with expenses.
+###  Visualizations
 
-Visualization:
+- **Histograms & KDE plots** → Feature distributions  
+- **Boxplots** → Median, IQR, outliers  
+- **Correlation heatmap** → Feature relationships  
 
-  Histograms & KDE plots → show feature distributions and density peaks.
+---
 
-  Boxplots → show median, spread (IQR), and outliers.
+##  Part B: Linear Regression
 
-  Correlation heatmap → shows strength of feature relationships.
+###  Objective
+Predict insurance expenses using dataset features.
 
-Part B: Linear Regression
+###  Implementation
 
-  Objective: Predict insurance expenses using features from the dataset.
+- **Features selected:** `bmi` (Simple Linear Regression)
+- **Model:** Linear Regression (scikit-learn)
+- **Notebook:** `part_b_linear_regression.ipynb`
 
-Implementation:
-
-  Features selected: bmi (for simple linear regression)
-
-  Model: Linear Regression using scikit-learn
-
-  Notebook: part_b_linear_regression.ipynb
-
-Results:
-
-  Fitted the regression model to calculate slope and intercept from your dataset.
+###  Results
 
 Regression Equation:
 
-  expenses = (slope × bmi) + intercept
+```text
+expenses = (slope × bmi) + intercept
 
-  This equation can be used to predict expenses for any BMI value.
-
-Visualization:
-
-  Scatter plot showing relationship between BMI and expenses.
-
-  Regression line fitted to the data points.
-
-🛠 Technologies Used
-
-  Python
-
-  Pandas
-
-  NumPy
-
-  Matplotlib
-
-  Seaborn
-
-  Scikit-learn
-
-  Jupyter Notebook
-
-Key Learnings:
-
-  Explored data distribution, skewness, and density using histograms and KDE plots.
-
-  Detected outliers using IQR method.
-
-  Measured feature relationships with Pearson correlation.
-
-  Built and interpreted a linear regression model.
-
-  Learned how to predict expenses using regression equation.
