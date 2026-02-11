@@ -6,7 +6,7 @@ We explore the dataset, understand feature relationships, detect outliers, and b
 
 ---
 
-##  Dataset
+## Dataset
 
 **File:** `insurance.csv`
 
@@ -16,18 +16,18 @@ We explore the dataset, understand feature relationships, detect outliers, and b
 - **bmi** → Body Mass Index  
 - **children** → Number of children  
 
-###  Target
+### Target
 
 - **expenses** → Medical insurance cost
 
 ---
 
-##  Part A: Exploratory Data Analysis (EDA)
+## Part A: Exploratory Data Analysis (EDA)
 
-###  Objective
+### Objective
 Understand the data and feature relationships before modeling.
 
-### ⚙️ Implementation
+### Implementation
 
 - Loaded dataset and checked:
   - First 5 rows
@@ -46,7 +46,7 @@ Understand the data and feature relationships before modeling.
 
 - Calculated **Pearson correlation**
 
-###  Results
+### Results
 
 - Most people are aged **30–40**
 - BMI mostly between **20–30**
@@ -54,7 +54,7 @@ Understand the data and feature relationships before modeling.
 - Expenses are **right-skewed**
 - **Age & BMI** show positive correlation with expenses
 
-###  Visualizations
+### Visualizations
 
 - **Histograms & KDE plots** → Feature distributions  
 - **Boxplots** → Median, IQR, outliers  
@@ -62,23 +62,24 @@ Understand the data and feature relationships before modeling.
 
 ---
 
-##  Part B: Linear Regression
+## Part B: Linear Regression
 
-###  Objective
+### Objective
 Predict insurance expenses using dataset features.
 
-###  Implementation
+### Implementation
 
-- **Features selected:** `bmi` (Simple Linear Regression)
+- **Feature selected:** `bmi` (Simple Linear Regression)
 - **Model:** Linear Regression (scikit-learn)
 - **Notebook:** `part_b_linear_regression.ipynb`
 
-###  Results
+### Results
 
-Regression Equation:
+**Regression Equation**
 
 ```text
 expenses = (slope × bmi) + intercept
+```
 
 This equation can be used to predict expenses for any BMI value.
 
@@ -104,5 +105,6 @@ This equation can be used to predict expenses for any BMI value.
 - Measured feature relationships with Pearson correlation
 - Built and interpreted a linear regression model
 - Learned how to predict expenses using regression equation
+
 
 
