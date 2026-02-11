@@ -80,3 +80,35 @@ Regression Equation:
 ```text
 expenses = (slope × bmi) + intercept
 
+This equation can be used to predict expenses for **any BMI value**.
+
+---
+
+##  Visualization
+
+- Scatter plot showing the relationship between **BMI** and **expenses**
+- Regression line fitted to the data points
+
+---
+
+##  Technologies Used
+
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib  
+- Seaborn  
+- Scikit-learn  
+- Jupyter Notebook  
+
+---
+
+##  Key Learnings
+
+- Explored data distribution, skewness, and density using **histograms** and **KDE plots**
+- Detected outliers using the **IQR method**
+- Measured feature relationships with **Pearson correlation**
+- Built and interpreted a **Linear Regression model**
+- Learned how to predict expenses using the **regression equation**
+
+
