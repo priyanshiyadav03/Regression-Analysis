@@ -55,22 +55,27 @@ class PolynomialLinearRegression:
 
 
 class LinearRegressionBatchGD:
-	def __init__(self, learning_rate = 0.01, epochs = 10):
-		self.coef_ = None
-		self.intercept_ = None
-		self.learning_rate = learning_rate
-		self.epochs = epochs
-
-	def fit(self, x_train, y_train):
-		self.coef_ = np.ones(x_train.shape[0])
-		self.intercept_ = 0
-		for i in range(self.epochs):
-			self.subtr = y_train - (self.coef_ + np.dot(x_train, sefl.coef_))
-			self.intercept_slope = -2 * np.mean(self.subtr)
-			self.coef_slope = (-2/x_train.shape[0]) * np.dot(self.subtr, x_train) 
-			self.coef_ = self.coef_ - (learning_rate * self.coef_slope)
-			self.intercept_ = self.intercept_ - (learning_rate * self.intercept_slope)
-
-	def transform(self, x_test):
-		y_test = self.intercept_ + np.dot(x_train, self.coef_)
-		return y_test
+    
+    def __init__(self,learning_rate=0.01,epochs=10):
+        
+        self.coef_ = None
+        self.intercept_ = None
+        self.lr = learning_rate
+        self.epochs = epochs
+        
+    def fit(self,X_train,y_train):
+        self.intercept_ = 0
+        self.coef_ = np.ones(X_train.shape[1])
+        
+        for i in range(self.epochs):
+            y_hat = np.dot(X_train,self.coef_) + self.intercept_
+            intercept_der = -2 * np.mean(y_train - y_hat)
+            self.intercept_ = self.intercept_ - (self.lr * intercept_der)
+            
+            coef_der = -2 * np.dot((y_train - y_hat),X_train)/X_train.shape[0]
+            self.coef_ = self.coef_ - (self.lr * coef_der)
+        
+        print(self.intercept_,self.coef_)
+    
+    def predict(self,X_test):
+        return np.dot(X_test,self.coef_) + self.intercept_
