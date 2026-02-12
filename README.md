@@ -48,7 +48,7 @@ bmi	4
 children	5
 smoker	5
 region	4
-expenses	4*
+expenses	4**
 
 - Detected outliers using **IQR method**
 
