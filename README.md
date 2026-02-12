@@ -40,7 +40,15 @@ Understand the data and feature relationships before modeling.
   - Min / Max
   - Quartiles
 
-- Checked for missing values → **None found**
+- Checked for missing values → **
+0
+age	5
+sex	5
+bmi	4
+children	5
+smoker	5
+region	4
+expenses	4*
 
 - Detected outliers using **IQR method**
 
@@ -70,7 +78,7 @@ Predict insurance expenses using dataset features.
 ### Implementation
 
 - **Feature selected:** `bmi` (Simple Linear Regression)
-- **Model:** Linear Regression (scikit-learn)
+- **Model:** Linear Regression (scikit-learn & manual code)
 - **Notebook:** `part_b_linear_regression.ipynb`
 
 ### Results
