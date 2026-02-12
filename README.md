@@ -44,13 +44,13 @@ Understand the data and feature relationships before modeling.
 
 | Feature   | Missing Values |
 |----------|----------------|
-| age      | 0 |
-| sex      | 0 |
-| bmi      | 0 |
-| children | 0 |
-| smoker   | 0 |
-| region   | 0 |
-| expenses | 0 |
+| age      | 5 |
+| sex      | 5 |
+| bmi      | 4 |
+| children | 5 |
+| smoker   | 5 |
+| region   | 4 |
+| expenses | 4 |
 
 
 - Detected outliers using **IQR method**
