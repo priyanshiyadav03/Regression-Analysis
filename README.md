@@ -1,5 +1,7 @@
 # Medical Insurance Expense Prediction
 
+# Deployment Link : https://insurance-price-prediction-2006.streamlit.app/
+
 This project predicts **medical insurance expenses** based on features like **age, BMI, and number of children**.
 
 We explore the dataset, understand feature relationships, detect outliers, and build a **Linear Regression model** to predict expenses.
